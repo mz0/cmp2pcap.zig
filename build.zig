@@ -1,14 +1,4 @@
 const std = @import("std");
-//const builtin = @import("builtin");
-//const tests = @import("test/tests.zig");
-
-//const CompileStep = Build.CompileStep;
-//const Step = Build.Step;
-//const Child = std.process.Child;
-
-//const assert = std.debug.assert;
-//const join = std.fs.path.join;
-//const print = std.debug.print;
 
 pub fn build(b: *std.Build) !void {
     const exe = b.addExecutable(.{
@@ -43,3 +33,5 @@ pub fn build(b: *std.Build) !void {
     const run_step = b.step("run", "Run the program");
     run_step.dependOn(&run_cmd.step);
 }
+
+// zig 0.14.0-dev.3298
